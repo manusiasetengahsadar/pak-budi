@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Web dengan Navigasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .container {
+            display: flex;
+            flex: 1;
+        }
+        aside {
+            background-color: #f4f4f4;
+            width: 200px;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        main {
+            flex: 1;
+            padding: 1rem;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Header Halaman</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <aside>
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#link1">Link 1</a></li>
+                <li><a href="#link2">Link 2</a></li>
+                <li><a href="#link3">Link 3</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h2>Konten Utama</h2>
+            <p>Ini adalah area konten utama halaman. Anda dapat menambahkan teks, gambar, atau elemen lainnya di sini.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </main>
+    </div>
+    <footer>
+        <p>Steven Putra Sava Maryano_251011700522</p>
+    </footer>
+</body> 
+</html>

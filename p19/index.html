@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>data mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Hitung Total Belanja</h2>
+        <input type="text" id="nama" placeholder="Masukkan nama Anda">
+        
+        <input type="number" id="NIM" placeholder="Masukkan NIM Anda">
+
+        <input type="number" id="usia" placeholder="Masukkan usia Anda">
+
+        <button onclick="Tampilkan()">Tampilkan</button>
+        <div id="hasil"></div>
+    </div>
+
+    <script>
+        function Tampilkan() {
+            // Variabel tipe data string & number
+            let namaPembeli = document.getElementById("nama").value;
+            let hargaBarang = Number(document.getElementById("NIM").value);
+            let jumlahBarang = Number(document.getElementById("usia").value);
+
+            // Operator Aritmatika
+            let total = hargaBarang * jumlahBarang;
+
+            // Output ke HTML
+            document.getElementById("hasil").innerHTML =
+                `<p>Halo <strong>${namaPembeli}</strong>!<br>
+                Total belanja Anda adalah: <strong>Rp ${total.toLocaleString()}</strong></p>`;
+        }
+    </script>
+
+</body>
+</html>

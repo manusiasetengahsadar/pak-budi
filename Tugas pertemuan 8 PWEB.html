@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Penerimaan</title>
+</head>
+<body>
+    <form action="simpan_data.php" method="post" novalidate></form>
+        <h1>Form Penerimaan karyawan Baru</h1>
+        <hr>
+        <pre>
+
+NIK            : <input type="text" size="11" name="nik">
+
+NAMA LENGKAP   : <input type="text" size="25" name="nama lengkap">
+
+TANGGAL LAHIR  : <input type="date" size="25" name="tanggal lahir">
+
+JENIS KELAMIN  : 
+    <input type="radio" name="jkel" value="Pria">Pria<br>
+    <input type="radio" name="jkel" value="Wanita">Wanita<br>
+
+ALAMAT  :
+    <textarea name="alamat" rows="3" cols="30"></textarea>
+
+PENDIDIKAN TERAKHIR     :
+    <select name="pendidkan terakhir"><br>
+        <option value="SMA/SMK">SMA/SMK</option>
+        <option value="Diploma (D3)">Diploma (D3)</option>
+        <option value="Diploma (D4)">Diploma (D4)</option>
+        <option value="Sarjana (S1)">Sarjana (S1)</option>
+        <option value="Magister (S2)">Magister (S2)</option>
+    </select><br>
+
+JABATAN YANG DILAMAR    :
+    <select name="pilih jabatan" size="1"><br>
+        <option value="Supervisor">Supervisor</option>
+        <option value="Manajer">Manajer</option>
+        <option value="Cleaning Service">Cleaning Service</option>
+        <option value="IT Support">IT Support</option>
+        <option value="Teknik Elektro">Teknik Elektro</option>
+        <option value="Teknik Sipil">Teknik Sipil</option>
+        <option value="Teknik Arsitektur">Teknik Arsitektur</option>
+        <option value="Perencanaan Wil. Kota">Perencanaan wil. Kota</option>
+    </select><br>
+
+UPLOAD CV(PDF/DOC)
+        <input type="file">
+        </pre>
+        
+        <input type="submit" value="Daftar">
+        <input type="reset" value="Reset">
+    </form>
+</body>
+</html>

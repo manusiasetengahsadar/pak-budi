@@ -1,0 +1,109 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .header {
+            background-color: #cc0000;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav {
+            display: flex;
+            list-style: none;
+        }
+        .nav-item {
+            margin-left: 20px;
+        }
+        .nav-link {
+            color: white;
+            text-decoration: none;
+        }
+        .nav-link:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            display: flex;
+            gap: 20px;
+            flex: 1;
+        }
+
+        .main-content {
+            flex: 3;
+        }
+        .featured-article {
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .featured-title {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .featured-image {
+            width: fit-content;
+            height: fit-content;
+            margin-top: 20px;
+            margin-left: 80px;
+            margin-right: 30px;
+            margin-bottom: 10px;
+        }
+        .featured-summary {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .sidebar {
+            flex: 1;
+        }
+        .sidebar-section {
+            background-color: white;
+            padding: 30px;
+            margin-right: 40px;
+            margin-top: 70px;
+            border-radius: 5px;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.1);
+        }
+        .sidebar-title {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .sidebar-item {
+            margin-bottom: 10px;
+        }
+        .sidebar-link {
+            text-decoration: none;
+            color: #333;
+        }
+        .sidebar-link:hover {
+            color: #cc0000;
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 60px;
+            margin-top: auto;
+        }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Interaksi JavaScript</title>
+</head>
+<body>
+<h2>Interaksi JavaScript</h2>
+<p id="hasil"></p>
+<script>
+// Alert Box
+alert("Selamat datang di website interaktif JavaScript!");
+// Confirm Box
+let konfirmasi = confirm("Apakah Anda ingin mengisi data pengguna?");
+// Jika pengguna menekan OK pada confirm
+if (konfirmasi) {
+    // Dialog Box
+    let nama = prompt("Masukkan nama Anda:");
+    if (nama !== null && nama !== "") {
+        //Tampilkan informasi sesuai input
+        document.getElementById("hasil").innerHTML =
+            "Halo, <b>" + nama + "</b>! Terima kasih telah mengisi data.";
+    } else {
+        document.getElementById("hasil").innerHTML =
+            "Anda tidak memasukkan nama.";
+    }
+} else {
+    document.getElementById("hasil").innerHTML =
+        "Anda memilih untuk tidak mengisi data.";
+}
+</script>
+</body>
+</html>

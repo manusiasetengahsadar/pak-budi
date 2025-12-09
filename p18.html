@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiket Bioskop</title>
+</head>
+<body>
+    <h1>Pemesanan Tiket Bioskop</h1>
+    <form id="ticketForm">
+        <label for="age">Usia:</label>
+        <input type="number" id="age" required><br><br>
+        
+        <label for="day">Hari:</label>
+        <select id="day" required>
+            <option value="weekday">Weekday (Senin-Jumat)</option>
+            <option value="weekend">Weekend (Sabtu-Minggu)</option>
+        </select><br><br>
+        
+        <button type="button" onclick="calculatePrice()">Hitung Harga</button>
+    </form>
+    
+    <p id="result"></p>
+
+    <script>
+        function calculatePrice() {
+            const age = parseInt(document.getElementById('age').value);
+            const day = document.getElementById('day').value;
+            let basePrice;
+
+            // Percabangan berdasarkan usia
+            if (age < 12) {
+                basePrice = 30000; // Anak
+            } else if (age >= 12 && age < 60) {
+                basePrice = 50000; // Dewasa
+            } else {
+                basePrice = 40000; // Lansia
+            }
+
+            // Tambahan untuk weekend
+            if (day === 'weekend') {
+                basePrice += 10000; 
+            }
+
+            // Tampilkan hasil
+            document.getElementById('result').innerText = `Harga tiket: Rp ${basePrice.toLocaleString('id-ID')}`;
+        }
+    </script>
+</body>
+</html>
