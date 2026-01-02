@@ -1,148 +1,452 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Portfolio | Web Developer</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="#home"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="#profile"><i class="fas fa-user"></i> Profile</a></li>
-            <li><a href="#project"><i class="fas fa-project-diagram"></i> Project</a></li>
-            <li><a href="#media"><i class="fas fa-photo-video"></i> Media</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contact</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">MY<span>PORTO</span></a>
+            
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#profile" class="nav-link">Profile</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#media" class="nav-link">Media</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                
+                <div class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </div>
+            </div>
+            
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
     </nav>
 
-    <section id="home" class="section-bg">
-        <div class="container">
-            <h1>Welcome to My Portfolio</h1>
-            <p>Ini adalah portofolio saya sebagai seorang mahasiswa Sistem Informasi 
-                dan ingin menunjukan project saya menggunakan HTML, CSS, dan JavaScript
-                tetapi sebelum itu saya ingin mengutip motivasi filsuf yunani yaitu:
-            <ul>" Mengedukasi pikiran tanpa mengedukasi hati sama dengan tak mengedukasi apa-apa. "(Aristoteles)</ul>
-
-            </p>
-            <button onclick="scrollToSection('profile')"><i class="fas fa-arrow-down"></i> Jelajah</button>
-        </div>
-    </section>
-
-    <section id="profile" class="section-bg">
-        <div class="container">
-            <h2><i class="fas fa-id-card"></i> Profile</h2>
-            <div class="profile-content">
-                <img src="steven1.jpeg" alt="Profile Photo" class="profile-img">
-                <div class="profile-info">
-                    <h3>Nama: Steven Putra Sava Maryano</h3>
-                    <p><i class="fas fa-graduation-cap"></i> Kelas: 01SIFP009</p>
-                    <p><i class="fas fa-id-badge"></i> NIM: 251011700522</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="project" class="section-bg">
-        <div class="container">
-            <h2><i class="fas fa-cogs"></i> Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="p10.png" alt="Project 1">
-                    <div class="card-content">
-                        <h3>Menu Navigasi</h3>
-                        <p>Membuat tampilan menu navigasi.</p>
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <div class="container">
+                <div class="home-content">
+                    <div class="home-text">
+                        <h4 class="subtitle">Halo, saya</h4>
+                        <h1 class="title">Steven <span class="highlight">Putra</span></h1>
+                        <h2 class="role">Mahasiswa Sistem Informasi</h2>
+                        <p class="description">
+                            Saya seorang mahasiswa yang passionate dalam pengembangan web dan teknologi. 
+                            Selalu belajar dan berinovasi untuk menciptakan solusi digital yang bermanfaat.
+                        </p>
+                        <div class="home-buttons">
+                            <a href="#projects" class="btn btn-primary">Lihat Project</a>
+                            <a href="#contact" class="btn btn-secondary">Hubungi Saya</a>
+                        </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <img src="p11.png" alt="Project 2">
-                    <div class="card-content">
-                        <h3>Design WEB</h3>
-                        <p>Mendesaign sebuah web perkenalan diri menggunakan CSS.</p>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <img src="p14.png" alt="Project 3">
-                    <div class="card-content">
-                        <h3>WEB Layout</h3>
-                        <p>Membuat WEB layout lebih modern dan interaktif.</p>
+                    <div class="home-image">
+                        <div class="image-wrapper">
+                            <img src="steven2.jpeg" alt="Profile">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="media" class="section-bg">
-        <div class="container">
-            <h2><i class="fas fa-images"></i> Media</h2>
-            <div class="media-grid">
-                <div class="media-item" onclick="openModal('poto1.jpeg', 'image')">
-                    <img src="poto1.jpeg" alt="Photo 1">
+        <!-- Profile Section -->
+        <section id="profile" class="section profile-section">
+            <div class="container">
+                <h2 class="section-title">Profil <span>Saya</span></h2>
+                <p class="section-subtitle">Kenali lebih dekat tentang saya</p>
+                
+                <div class="profile-content">
+                    <div class="profile-card">
+                        <div class="profile-info">
+                            <div class="info-item">
+                                <i class="fas fa-user"></i>
+                                <div>
+                                    <h4>Nama Lengkap</h4>
+                                    <p>Steven Putra Sava Maryano</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-id-card"></i>
+                                <div>
+                                    <h4>NIM</h4>
+                                    <p>251011700522</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <div>
+                                    <h4>Kelas</h4>
+                                    <p>01SIFP009</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-university"></i>
+                                <div>
+                                    <h4>Jurusan</h4>
+                                    <p>Sistem Informasi</p>
+                                </div>
+                            </div>
+                            <div class="info-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div>
+                                    <h4>Lokasi</h4>
+                                    <p>Jakarta, Indonesia</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="profile-skills">
+                            <h3>Skills</h3>
+                            <div class="skill-item">
+                                <span>HTML/CSS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 60%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 40%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 25%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span>Public Speaking</span>
+                                <div class="skill-bar">
+                                    <div class="skill-level" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="media-item" onclick="openModal('vid1.mp4', 'video')">
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <h2 class="section-title">Project <span>Saya</span></h2>
+                <p class="section-subtitle">Beberapa project yang telah saya kerjakan</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="p10.jpeg" alt="Project 1">
+                        </div>
+                        <div class="project-content">
+                            <h3>Website design CSS</h3>
+                            <p>Website sederhana dengan menggunakan bahasa HTML dan CSS berupa biodata diri.</p>
+                            <div class="project-tech">
+                                <span>HTML/CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="p13.jpeg" alt="Project 2">
+                        </div>
+                        <div class="project-content">
+                            <h3>Sistem Hitung Belanja</h3>
+                            <p>Platform sederhana untuk menghitung barang belanja dan menentukan total produk.</p>
+                            <div class="project-tech">
+                                <span>JavaScript</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>C++</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="p12.jpeg" alt="Project 3">
+                        </div>
+                        <div class="project-content">
+                            <h3>Website portofolio</h3>
+                            <p>Website untuk memperkenalkan diri serta keahliannya.</p>
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Media Section -->
+        <section id="media" class="section media-section">
+            <div class="container">
+                <h2 class="section-title">Media <span>Gallery</span></h2>
+                <p class="section-subtitle">Foto dan video dokumentasi</p>
+                
+                <div class="media-tabs">
+                    <button class="tab-btn active" data-tab="photos">Foto</button>
+                    <button class="tab-btn" data-tab="videos">Video</button>
+                </div>
+                
+                <div class="media-content">
+                    <div class="tab-content active" id="photos">
+                        <div class="photos-grid">
+                            <div class="photo-item">
+                                <img src="poto1.jpeg" alt="Foto 1">
+                                <div class="photo-overlay">
+                                </div>
+                            </div>
+                            <div class="photo-item">
+                                <img src="poto2.jpeg" alt="Foto 2">
+                                <div class="photo-overlay">
+                                </div>
+                            </div>
+                            <div class="photo-item">
+                                <img src="poto3.jpeg" alt="Foto 3">
+                                <div class="photo-overlay">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content" id="videos">
+    <div class="videos-grid">
+        <!-- Video 1 -->
+        <div class="video-item">
+            <div class="video-wrapper">
+                <div class="video-player">
                     <video>
                         <source src="vid1.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutar video.
                     </video>
-                </div>
-                <div class="media-item" onclick="openModal('poto2.jpeg', 'image')">
-                    <img src="poto2.jpeg" alt="Photo 2">
-                </div>
-                <div class="media-item" onclick="openModal('vid2.mp4', 'video')">
-                    <video>
-                        <source src="vid2.mp4" type="video/mp4">
-                    </video>
-                </div>
-                <div class="media-item" onclick="openModal('poto3.jpeg', 'image')">
-                    <img src="poto3.jpeg" alt="Photo 3">
+                    <div class="video-controls">
+                        <button class="control-btn play-pause-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="time-display">
+                            <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
 
-    <section id="contact" class="section-bg">
-        <div class="container">
-            <h2><i class="fas fa-envelope"></i> Contact Me</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <label for="name"><i class="fas fa-user"></i> Nama</label>
-                    <input type="text" id="name" name="name" required>
+        <!-- Video 2 -->
+        <div class="video-item">
+            <div class="video-wrapper">
+                <div class="video-player">
+                    <video>
+                        <source src="vid2.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutar video.
+                    </video>
+                    <div class="video-controls">
+                        <button class="control-btn play-pause-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="time-display">
+                            <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="phone"><i class="fas fa-phone"></i> No Telpon</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-group">
-                    <label for="email"><i class="fas fa-envelope"></i> Email</label>
-                    <input type="email" id="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message"><i class="fas fa-comment"></i> Pesan</label>
-                    <textarea id="message" name="message" rows="5" required></textarea>
-                </div>
-                <button type="submit"><i class="fas fa-paper-plane"></i> Kirim</button>
-            </form>
+            </div>
         </div>
-    </section>
+
+        <!-- Video 3 -->
+        <div class="video-item">
+            <div class="video-wrapper">
+                <div class="video-player">
+                    <video>
+                        <source src="vid3.mp4" type="video/mp4">
+                        Browser Anda tidak mendukung pemutar video.
+                    </video>
+                    <div class="video-controls">
+                        <button class="control-btn play-pause-btn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <div class="progress-container">
+                            <div class="progress-bar">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                        <div class="time-display">
+                            <span class="current-time">0:00</span> / <span class="duration">0:00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>                
+</section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Hubungi <span>Saya</span></h2>
+                <p class="section-subtitle">Silakan hubungi untuk kolaborasi atau pertanyaan</p>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-user"></i>
+                            <div>
+                                <h4>Nama</h4>
+                                <p>Steven Putra Sava Maryano</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telepon</h4>
+                                <p>+62 857 1914 5897</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>stevenputrasavamaryano@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Alamat</h4>
+                                <p>Jl. Cilandak KKO NO 9A RT 014/008,Ragunan, Pasar Minggu, Jakarta Selatan</p>
+                            </div>
+                        </div>    
+                    </div>
+                    
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <input type="text" placeholder="Nama Lengkap" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="NO.Telp" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Pesan Anda" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Feedback Section -->
+        <section id="feedback" class="section feedback-section">
+            <div class="container">
+                <h2 class="section-title">Saran & <span>Kritik</span></h2>
+                <p class="section-subtitle">Berikan masukan untuk pengembangan portofolio ini</p>
+                
+                <div class="feedback-form">
+                    <form id="feedbackForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <input type="text" placeholder="Nama Anda" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Email Anda" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <select required>
+                                <option value="" disabled selected>Pilih Kategori</option>
+                                <option value="design">Desain UI/UX</option>
+                                <option value="content">Konten</option>
+                                <option value="functionality">Fungsionalitas</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Saran atau kritik Anda" rows="6" required></textarea>
+                        </div>
+                        <div class="form-group checkbox">
+                            <input type="checkbox" id="subscribe" checked>
+                            <label for="subscribe">Ingin mendapatkan update dari saya</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Kirim Saran
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 steven Putra Sava Maryano. All rights reserved.</p>
-            <p><i class="fas fa-map-marker-alt"></i> Alamat: Jl. Cilandak KKO Gg Saaman No. 9A RT 014/008, Ragunan, Pasar Minggu, Indonesia</p>
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>Portfolio Website</h3>
+                    <p>Website portofolio pribadi untuk menampilkan karya dan pengalaman dalam pengembangan web.</p>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-map-marker-alt"></i> Jl. Cilandak KKO NO 9A RT 014/008,Ragunan, Pasar Minggu, Jakarta Selatan</p>
+                        <p><i class="fas fa-envelope"></i> stevenputrasavamaryano@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#profile">Profile</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="social-links">
+                            <h4>Media Sosial</h4>
+                            <div class="social-icons">
+                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                <a href="#"><i class="fab fa-github"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> Portfolio Website. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
-    <!-- Modal for Media -->
-    <div id="modal" class="modal">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <div class="modal-content">
-            <img id="modal-img" style="display:none;">
-            <video id="modal-video" controls style="display:none;"></video>
-        </div>
-    </div>
-
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
